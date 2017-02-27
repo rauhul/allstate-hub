@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="15A279b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Ubuntu-R.ttf">
+            <string>Ubuntu</string>
+            <string>Ubuntu</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="167" id="bHs-FK-0mm" customClass="RuleCell" customModule="Hub" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="161"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bHs-FK-0mm" id="WnY-Hx-VvQ">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="160"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cAv-EX-s2D">
+                        <rect key="frame" x="10" y="30" width="245" height="122"/>
+                        <animations/>
+                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitat</string>
+                        <fontDescription key="fontDescription" name="Ubuntu" family="Ubuntu" pointSize="14"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    </textView>
+                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="752" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hzt-ai-Yox">
+                        <rect key="frame" x="263" y="65" width="51" height="31"/>
+                        <animations/>
+                        <connections>
+                            <action selector="switched:" destination="bHs-FK-0mm" eventType="valueChanged" id="aSf-kK-H2E"/>
+                        </connections>
+                    </switch>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TN1-Yz-Wf9">
+                        <rect key="frame" x="14" y="12" width="35" height="20"/>
+                        <animations/>
+                        <fontDescription key="fontDescription" name="Ubuntu" family="Ubuntu" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <animations/>
+                <constraints>
+                    <constraint firstItem="TN1-Yz-Wf9" firstAttribute="top" secondItem="WnY-Hx-VvQ" secondAttribute="topMargin" constant="4" id="JSQ-m4-l6a"/>
+                    <constraint firstItem="cAv-EX-s2D" firstAttribute="leading" secondItem="WnY-Hx-VvQ" secondAttribute="leadingMargin" constant="2" id="MpW-UL-G7o"/>
+                    <constraint firstItem="cAv-EX-s2D" firstAttribute="bottom" secondItem="WnY-Hx-VvQ" secondAttribute="bottomMargin" id="QwA-ze-6SP"/>
+                    <constraint firstItem="cAv-EX-s2D" firstAttribute="top" secondItem="TN1-Yz-Wf9" secondAttribute="bottom" constant="-2" id="aGh-w0-QB5"/>
+                    <constraint firstItem="Hzt-ai-Yox" firstAttribute="trailing" secondItem="WnY-Hx-VvQ" secondAttribute="trailingMargin" id="bBY-Ru-9FD"/>
+                    <constraint firstItem="Hzt-ai-Yox" firstAttribute="centerY" secondItem="WnY-Hx-VvQ" secondAttribute="centerY" id="fm1-fh-ma0"/>
+                    <constraint firstItem="Hzt-ai-Yox" firstAttribute="leading" secondItem="cAv-EX-s2D" secondAttribute="trailing" constant="8" id="g7u-9v-JN2"/>
+                    <constraint firstItem="TN1-Yz-Wf9" firstAttribute="leading" secondItem="WnY-Hx-VvQ" secondAttribute="leadingMargin" constant="6" id="qYM-aL-HlO"/>
+                </constraints>
+            </tableViewCellContentView>
+            <animations/>
+            <connections>
+                <outlet property="enableSwitch" destination="Hzt-ai-Yox" id="N6V-Nw-hNr"/>
+                <outlet property="ruleDescription" destination="cAv-EX-s2D" id="5Ul-pO-5BU"/>
+                <outlet property="title" destination="TN1-Yz-Wf9" id="CZC-pL-afE"/>
+            </connections>
+            <point key="canvasLocation" x="72" y="409.5"/>
+        </tableViewCell>
+    </objects>
+</document>
